@@ -1,0 +1,15 @@
+{
+  "name": "careermove-showcase",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "api:dev": "DATA_DIR=./data CAREERMOVE_SCHEMA_ON_START=1 CAREERMOVE_LOCAL_DEMO=1 PYDANTIC_DISABLE_PLUGINS=1 python -m uvicorn api.main:app --host 127.0.0.1 --port 8080",
+    "api:test": "PYDANTIC_DISABLE_PLUGINS=1 python -m unittest discover -s tests -v && python -m py_compile api/main.py api/worker.py api/database.py app/public_release.py app/live_jobs.py app/push_notifications.py",
+    "web:dev": "npm --prefix web run dev",
+    "web:test": "npm --prefix web test",
+    "web:build": "npm --prefix web run build",
+    "check:public": "bash scripts/check_public_release.sh",
+    "test": "npm run check:public && npm run api:test && npm run web:test && npm run web:build"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "npm --prefix web ci",
+  "buildCommand": "npm run build",
+  "outputDirectory": "web/dist",
+  "functions": {
+    "api/index.py": {
+      "maxDuration": 60,
+      "excludeFiles": "{web/**,tests/**,docs/**,.git/**,data/**,**/__pycache__/**,**/*.pyc}"
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/cron/daily-search",
+      "schedule": "0 7 * * *"
+    },
+    {
+      "path": "/api/cron/daily-search",
+      "schedule": "0 15 * * *"
+    }
+  ],
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index.py" }
+  ]
+}

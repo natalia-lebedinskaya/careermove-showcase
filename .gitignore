@@ -1,0 +1,43 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+web/.env.local
+web/.env.*.local
+*.pem
+*.key
+
+# Personal and runtime data
+data/
+api/seed/
+uploads/
+exports/
+backups/
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.docx
+*.xlsx
+*.xls
+*.csv
+
+# Dependencies and generated output
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+node_modules/
+dist/
+*.tsbuildinfo
+.pytest_cache/
+.coverage
+.playwright-cli/
+
+# Hosting and editor state
+.vercel/
+.netlify/
+.wrangler/
+.DS_Store
+.idea/
+.vscode/

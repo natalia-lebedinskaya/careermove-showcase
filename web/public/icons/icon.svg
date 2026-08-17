@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="CareerMove">
+  <rect width="512" height="512" rx="112" fill="#2563eb"/>
+  <path fill="#ffffff" d="M150 169c0-32 26-58 58-58h96c32 0 58 26 58 58v20h34c25 0 45 20 45 45v122c0 25-20 45-45 45H116c-25 0-45-20-45-45V234c0-25 20-45 45-45h34v-20Zm58-18c-10 0-18 8-18 18v20h132v-20c0-10-8-18-18-18h-96Zm-92 78c-3 0-5 2-5 5v122c0 3 2 5 5 5h280c3 0 5-2 5-5V234c0-3-2-5-5-5H116Z"/>
+  <path fill="#93c5fd" d="M166 282h180v40H166z"/>
+</svg>
